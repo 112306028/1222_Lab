@@ -39,16 +39,14 @@
     </form>
 
     <div id="diceContainer">
-        <!-- First row of dice -->
         <img class="dice" id="die1" src="die1.png">
         <img class="dice" id="die2" src="die2.png">
         <img class="dice" id="die3" src="die3.png">
-        <!-- Second row of dice -->
+
         <img class="dice" id="die4" src="die4.png">
         <img class="dice" id="die5" src="die5.png">
         <img class="dice" id="die6" src="die6.png">
 
-        <!-- Additional dice for the second row -->
         <img class="dice" id="die7" src="die1.png">
         <img class="dice" id="die8" src="die2.png">
         <img class="dice" id="die9" src="die3.png">
@@ -79,20 +77,16 @@
             var button = document.getElementById("rollButton");
             button.addEventListener("click", rollDice);
 
-            // Fetch all dice elements
             var dice = document.querySelectorAll(".dice");
 
-            // Loop through each die to set initial attributes
             dice.forEach(function (die) {
                 setDieAttributes(die);
             });
         }
 
         function rollDice() {
-            // Fetch all dice elements
             var dice = document.querySelectorAll(".dice");
 
-            // Roll each die
             dice.forEach(function (die) {
                 setImage(die);
             });
